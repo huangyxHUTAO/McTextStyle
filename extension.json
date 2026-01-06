@@ -1,0 +1,18 @@
+{
+	"name": "McTextStyle",
+	"version": "1.0.2",
+	"author": "南鸢晨星",
+	"url": "https://nycx.top/",
+	"descriptionmsg": "可在页面中使用 Minecraft 风格的文本格式化喵~",
+	"type": "parserhook",
+	"AutoloadClasses": {
+		"McTextStyleHooks": "McTextStyle.php"
+	},
+	"ExtensionMessagesFiles": {
+		"McTextStyleMagic": "McTextStyle.i18n.php"
+	},
+	"Hooks": {
+		"ParserFirstCallInit": "McTextStyleHooks::onParserFirstCallInit"
+	},
+	"manifest_version": 2
+}

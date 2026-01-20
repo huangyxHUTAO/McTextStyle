@@ -83,9 +83,7 @@ class Utils
             if ($state['italic'])        $style .= 'font-style:italic;';
             if ($state['underline'])     $style .= 'text-decoration:underline;';
             if ($state['strikethrough']) $style .= 'text-decoration:line-through;';
-            $html .= "<span style=\"{$style}\">"
-                   . htmlspecialchars($buffer, ENT_QUOTES, 'UTF-8')
-                   . "</span>";
+            $html .= "<span style=\"{$style}\">" . $buffer . "</span>";
             $buffer = '';
         };
 

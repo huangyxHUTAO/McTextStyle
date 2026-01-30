@@ -5,10 +5,12 @@
 
 require_once __DIR__ . '/utils.php';
 use McTextStyle\Utils;
-use MediaWiki\Parser\Parser;
 
-$GLOBALS['wgHooks']['GetMagicWordIDs'][] = 'McTextStyleHooks::onGetMagicWordIDs';
-$GLOBALS['wgHooks']['ParserFirstCallInit'][] = 'McTextStyleHooks::onParserFirstCallInit';
+$GLOBALS['wgExtensionFunctions'][] = function() {
+    $container = \MediaWiki\MediaWikiServices::getInstance()->getHookContainer();
+    $container->register( 'GetMagicWordIDs', 'McTextStyleHooks::onGetMagicWordIDs' );
+    $container->register( 'ParserFirstCallInit', 'McTextStyleHooks::onParserFirstCallInit' );
+};
 
 class McTextStyleHooks
 {

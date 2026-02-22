@@ -68,8 +68,8 @@ class Utils
             '{reset}' => '§r',
             '{bold}' => '§l',
             '{italic}' => '§o',
-            '{underline}' => '§n',
-            '{strikethrough}' => '§m',
+            '{underline}' => '§y',
+            '{strikethrough}' => '§z',
             '{enter}' => "\n"
         ];
 
@@ -145,10 +145,10 @@ class Utils
                     case 'o':
                         $state['italic'] = true;
                         break;
-                    case 'n':
+                    case 'y':
                         $state['underline'] = true;
                         break;
-                    case 'm':
+                    case 'z':
                         $state['strikethrough'] = true;
                         break;
                     default:
